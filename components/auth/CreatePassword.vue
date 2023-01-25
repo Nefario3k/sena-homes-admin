@@ -207,7 +207,7 @@
         <form v-else class="content_area">
           <v-row class="row_form">
             <div class="col-12 logo">
-              <img src="/images/png/logo.png" alt="" />
+              <img src="images/png/logo.png" alt="" />
             </div>
             <div class="col-12" style="padding-bottom: 0; padding-top: 0">
               <header>Create New Password</header>

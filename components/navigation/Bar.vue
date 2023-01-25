@@ -34,7 +34,7 @@
       </header>
 
       <div class="bar_logo">
-        <nuxt-link to="/"><img src="/images/png/logo.png" alt="" /></nuxt-link>
+        <nuxt-link to="/"><img src="images/png/logo.png" alt="" /></nuxt-link>
       </div>
 
       <!-- user picture  -->
