@@ -144,10 +144,6 @@ a {
     overflow: hidden;
 }
 
-.v-overlay.v-overlay--active.theme--dark,
-.v-overlay.v-overlay--active.theme--dark .v-overlay__scrim {
-    /* backdrop-filter: blur(3px) !important; */
-}
 
 .v-dialog__content.v-dialog__content--active:has(.authCard.v-card.v-sheet.theme--light),
 .v-dialog__content.v-dialog__content--active:has(.authCard.v-card.v-sheet.theme--light)>.v-dialog.v-dialog--active,
@@ -505,7 +501,7 @@ nav[aria-label='Pagination Navigation'] {
     color: var(--primary-color) !important;
 }
 
-li:has(.v-pagination__navigation[disabled='disabled']) {
+li:has(.v-pagination__navigation[disabled]) {
     display: none;
 }
 
