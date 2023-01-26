@@ -7,7 +7,7 @@
   >
     <div class="navPanel">
       <div class="logo">
-        <nuxt-link to="/"><img src="/images/png/logo.png" alt="" /></nuxt-link>
+        <nuxt-link to="/"><img src="images/png/logo.png" alt="" /></nuxt-link>
         <div class="closePanel">
           <svg
             @click="drawer = false"
