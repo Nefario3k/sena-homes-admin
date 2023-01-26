@@ -130,6 +130,130 @@
                 </v-btn>
               </div>
             </div>
+
+            <!-- mobile view  -->
+            <div class="mobileCaption">
+              <div class="contentMobile">
+                <v-menu v-model="tab_open" bottom :nudge-bottom="5" offset-y>
+                  <template v-slot:activator="{ on, attrs }">
+                    <div class="relative" v-bind="attrs" v-on="on">
+                      <input
+                        :class="{ active: tab_open }"
+                        style="cursor: pointer !important"
+                        disabled
+                        v-model="currentView"
+                        required
+                        type="text"
+                        placeholder="Select option"
+                      />
+                      <div class="absolute dropdownSvg">
+                        <svg
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.2361 5.55738C13.1653 5.48597 13.0811 5.4293 12.9882 5.39062C12.8954 5.35194 12.7958 5.33203 12.6953 5.33203C12.5947 5.33203 12.4951 5.35194 12.4023 5.39062C12.3094 5.4293 12.2252 5.48597 12.1544 5.55738L8.66524 9.0465C8.59442 9.1179 8.51016 9.17457 8.41733 9.21325C8.32449 9.25193 8.22492 9.27184 8.12435 9.27184C8.02378 9.27184 7.92421 9.25193 7.83137 9.21325C7.73854 9.17457 7.65428 9.1179 7.58346 9.0465L4.09433 5.55738C4.02351 5.48597 3.93925 5.4293 3.84642 5.39062C3.75358 5.35194 3.65401 5.33203 3.55344 5.33203C3.45287 5.33203 3.35329 5.35194 3.26046 5.39062C3.16763 5.4293 3.08337 5.48597 3.01255 5.55738C2.87066 5.70011 2.79102 5.89319 2.79102 6.09446C2.79102 6.29572 2.87066 6.4888 3.01255 6.63154L6.50929 10.1283C6.93782 10.5563 7.5187 10.7967 8.12435 10.7967C8.73 10.7967 9.31088 10.5563 9.7394 10.1283L13.2361 6.63154C13.378 6.4888 13.4577 6.29572 13.4577 6.09446C13.4577 5.89319 13.378 5.70011 13.2361 5.55738Z"
+                            fill="#142232"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </template>
+                  <v-list elevation="0" flat class="dropdownList">
+                    <v-list-item
+                      @click="currentView = item.title"
+                      v-for="(item, index) in listItem"
+                      :key="index"
+                      class="list_item"
+                      :class="{ active_list: currentView == item.title }"
+                    >
+                      <v-list-item-title class="list_title"
+                        ><span class="active">
+                          {{ item.title }}
+                        </span>
+                        <span>({{ item.value }})</span></v-list-item-title
+                      >
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Search by property name"
+                  value=""
+                />
+
+                <div class="d-flex">
+                  <div title="filter" class="filterBtn">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 7L20 7"
+                        stroke="#BF9001"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M4 7L8 7"
+                        stroke="#BF9001"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M17 17L20 17"
+                        stroke="#BF9001"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M4 17L12 17"
+                        stroke="#BF9001"
+                        stroke-linecap="round"
+                      />
+                      <circle
+                        cx="10"
+                        cy="7"
+                        r="2"
+                        transform="rotate(90 10 7)"
+                        stroke="#BF9001"
+                        stroke-linecap="round"
+                      />
+                      <circle
+                        cx="15"
+                        cy="17"
+                        r="2"
+                        transform="rotate(90 15 17)"
+                        stroke="#BF9001"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <v-btn elevation="0" class="Btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.66683 2.66536C5.60596 2.66536 4.58855 3.08679 3.8384 3.83694C3.08826 4.58708 2.66683 5.6045 2.66683 6.66536C2.66683 7.19065 2.77029 7.7108 2.97131 8.1961C3.17233 8.6814 3.46697 9.12236 3.8384 9.49379C4.20984 9.86523 4.65079 10.1599 5.1361 10.3609C5.6214 10.5619 6.14154 10.6654 6.66683 10.6654C7.19212 10.6654 7.71226 10.5619 8.19756 10.3609C8.68287 10.1599 9.12382 9.86523 9.49526 9.49379C9.86669 9.12236 10.1613 8.6814 10.3623 8.1961C10.5634 7.7108 10.6668 7.19065 10.6668 6.66536C10.6668 5.6045 10.2454 4.58708 9.49526 3.83694C8.74511 3.08679 7.7277 2.66536 6.66683 2.66536ZM2.89559 2.89413C3.89579 1.89393 5.25234 1.33203 6.66683 1.33203C8.08132 1.33203 9.43787 1.89393 10.4381 2.89413C11.4383 3.89432 12.0002 5.25088 12.0002 6.66536C12.0002 7.36575 11.8622 8.05927 11.5942 8.70634C11.4116 9.14707 11.1712 9.56036 10.8799 9.93562L14.4716 13.5273C14.7319 13.7876 14.7319 14.2098 14.4716 14.4701C14.2112 14.7305 13.7891 14.7305 13.5288 14.4701L9.93708 10.8784C9.56183 11.1697 9.14853 11.4102 8.70781 11.5927C8.06074 11.8607 7.36721 11.9987 6.66683 11.9987C5.96645 11.9987 5.27292 11.8607 4.62585 11.5927C3.97878 11.3247 3.39084 10.9318 2.89559 10.4366C2.40035 9.94135 2.0075 9.35341 1.73947 8.70634C1.47145 8.05927 1.3335 7.36575 1.3335 6.66536C1.3335 5.25088 1.8954 3.89432 2.89559 2.89413Z"
+                        fill="white"
+                      />
+                    </svg>
+                    <span>Search</span>
+                  </v-btn>
+                </div>
+              </div>
+            </div>
             <v-data-table
               v-if="latest"
               v-model="selected"
@@ -417,6 +541,12 @@
 export default {
   data() {
     return {
+      tab_open: false,
+      listItem: [
+        { title: "All", value: 7 },
+        { title: "Disabled", value: 17 },
+      ],
+      currentView: "All",
       selected: [],
       page: 1,
       headers: [

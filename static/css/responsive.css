@@ -40,7 +40,9 @@
 }
 
 @media (max-width: 765px) {
-    .tabDropDown {
+
+    .tabDropDown,
+    .mobileCaption {
         display: block !important;
     }
 
@@ -100,6 +102,29 @@
         width: 100% !important;
         flex-direction: column !important;
         align-items: flex-end !important;
+    }
+
+    .viewMoreUsers {
+        flex-direction: column;
+        gap: 24px;
+        margin: 15px 0;
+        border: none !important;
+    }
+
+    .captionTable:has(.listing_stats) {
+        display: none !important;
+    }
+
+    .table_card_container .row_form .inputArea.imagesArea {
+        gap: 10px;
+    }
+
+    .table_card_container .row_form .inputArea.imagesArea .imgSvg {
+        width: 30%;
+    }
+
+    .table_card_container .row_form .inputArea.imagesArea .imgSvg svg {
+        width: 100%;
     }
 }
 

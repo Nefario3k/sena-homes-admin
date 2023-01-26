@@ -156,6 +156,55 @@
       font-weight: 500;
       cursor: pointer;
     }
+    .listing_stats {
+      width: 50%;
+      span {
+        &.all {
+          color: var(--primary-color);
+        }
+        &.disabled {
+          color: var(--secondary-color);
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            color: var(--primary-color);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        color: var(--bar-sub-text-color);
+      }
+    }
+    .listing_actions {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      input {
+        background: #fff;
+        border: 1px solid var(--border02-color);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.07);
+        border-radius: 8px;
+      }
+      .filterBtn {
+        margin-top: 4px;
+        cursor: pointer;
+      }
+      .Btn {
+        min-width: 10.2rem;
+        height: 3.9rem;
+        background-color: var(--primary-color);
+        border-radius: 8px;
+        span {
+          color: #fff;
+          font-weight: 500;
+          font-size: 1.4rem;
+          text-transform: initial;
+        }
+        svg {
+          margin-right: 4px;
+          display: inline-block;
+        }
+      }
+    }
   }
   .no_content_data {
     min-height: 27.8rem;
@@ -220,6 +269,13 @@
         transition: all 0.2s ease-in-out;
       }
     }
+    &.active_list {
+      .list_title {
+        span.active {
+          color: var(--primary-color);
+        }
+      }
+    }
   }
 }
 
@@ -230,6 +286,10 @@
   svg {
     width: 20px;
     height: 20px;
+    transition: all 0.25s ease-in-out;
+    path {
+      transition: all 0.2s ease-in-out;
+    }
   }
 }
 .amenities_section_wrapper.text_editor {
@@ -339,6 +399,71 @@
         color: #6e6c80;
         font-size: 1.2rem;
         font-weight: 400;
+      }
+    }
+  }
+}
+
+.mobileCaption {
+  .contentMobile {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border02-color);
+    gap: 10px;
+    input {
+      border: 1px solid var(--border03-color);
+      border-radius: 8px;
+      width: 100%;
+      min-height: 4rem;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      color: var(--secondary-color);
+      &::placeholder {
+        font-size: 1.3rem;
+        color: var(--placeholer-color);
+        font-weight: 400;
+      }
+      &.active {
+        border-color: var(--primary-color);
+      }
+      &:focus {
+        border-color: var(--primary-color);
+      }
+    }
+    .filterBtn {
+      cursor: pointer;
+      width: 10%;
+      margin: 4px 2.5% 0;
+    }
+    .Btn {
+      width: 85% !important;
+      height: 3.9rem !important;
+      background-color: var(--primary-color) !important;
+      border-radius: 8px !important;
+      span {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.4rem;
+        text-transform: initial;
+      }
+      svg {
+        margin-right: 4px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// control .dropdownSvg svg rotation
+div:has(input.active) {
+  > .dropdownSvg {
+    svg {
+      rotate: -180deg;
+      transition: all 0.25s ease-in-out;
+      path {
+        stroke: var(--primary-color);
+        transition: all 0.2s ease-in-out;
       }
     }
   }

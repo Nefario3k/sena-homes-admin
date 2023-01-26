@@ -7,7 +7,7 @@
   >
     <div class="navPanel">
       <div class="logo">
-        <nuxt-link to="/"><img src="images/png/logo.png" alt="" /></nuxt-link>
+        <nuxt-link to="/"><img src="/images/png/logo.png" alt="" /></nuxt-link>
         <div class="closePanel">
           <svg
             @click="drawer = false"
@@ -659,6 +659,9 @@ export default {
             color: #fff !important;
             transition: all 0.2s ease-in-out;
           }
+          .admin_count {
+            color: var(--primary-color);
+          }
           svg {
             rect {
               stroke: #fff !important;
@@ -696,6 +699,10 @@ export default {
         transition: all 0.2s ease-in-out;
         .item_title {
           color: #fff !important;
+          transition: all 0.2s ease-in-out;
+        }
+        .admin_count {
+          color: var(--primary-color);
           transition: all 0.2s ease-in-out;
         }
         svg {
@@ -786,6 +793,7 @@ export default {
     border-radius: 30px;
     font-weight: 500;
     color: var(--secondary-color);
+    transition: all 0.2s ease-in-out;
     font-size: 1.2rem;
   }
 }

@@ -501,7 +501,7 @@ nav[aria-label='Pagination Navigation'] {
     color: var(--primary-color) !important;
 }
 
-li:has(.v-pagination__navigation[disabled]) {
+li:has(.v-pagination__navigation[disabled=disabled]) {
     display: none;
 }
 
@@ -577,9 +577,9 @@ li:has(.v-pagination__navigation[disabled]) {
 /* table styles end */
 
 .hamburger,
-.mobileTable {
+.mobileTable,
+.mobileCaption {
     display: none !important;
-    /* margin-left: -12px; */
 }
 
 /* general styles end  */

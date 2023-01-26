@@ -11,7 +11,7 @@
         <form class="content_area">
           <v-row class="row_form">
             <div class="col-12 logo">
-              <img src="images/png/logo.png" alt="" />
+              <img src="/images/png/logo.png" alt="" />
             </div>
             <div class="col-12" style="padding-top: 0">
               <header>Log in</header>

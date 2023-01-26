@@ -34,7 +34,7 @@
       </header>
 
       <div class="bar_logo">
-        <nuxt-link to="/"><img src="images/png/logo.png" alt="" /></nuxt-link>
+        <nuxt-link to="/"><img src="/images/png/logo.png" alt="" /></nuxt-link>
       </div>
 
       <!-- user picture  -->
@@ -57,9 +57,7 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$route.query);
-  },
+  mounted() {},
 };
 </script>
 
@@ -95,7 +93,7 @@ export default {
   .control_area {
     display: flex;
     align-items: center;
-    gap: 44px;
+    gap: 35px;
   }
   .userImage {
     width: 4rem;
