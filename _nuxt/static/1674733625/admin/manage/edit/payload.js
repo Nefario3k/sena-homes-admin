@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/admin/manage/edit", {data:[{}],fetch:{},mutations:void 0});

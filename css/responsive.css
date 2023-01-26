@@ -1,0 +1,216 @@
+@media (max-width: 1040px) {
+    .hamburger {
+        display: block !important;
+    }
+}
+
+@media (max-width: 959px) {
+
+    .modal_content,
+    .modal_content.fPassword {
+        padding: 32px 0px 12px;
+    }
+
+    .modal_content .row_form label,
+    .modal_content .row_form .passwordShowWrapper>div span {
+        font-size: 1.4rem;
+    }
+
+    .modal_content .row_form .submit_wrapper .Btn {
+        min-width: 100%;
+    }
+
+    .topBar {
+        padding: 0 !important;
+    }
+
+    .row.content_row>.col-12 {
+        padding: 12px !important;
+    }
+
+    .content_row .users_table .table_card_container .row>.col-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content_spacer {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: 765px) {
+
+    .tabDropDown,
+    .mobileCaption {
+        display: block !important;
+    }
+
+    .tabArea {
+        display: none !important;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow .images_container {
+        gap: 12px !important;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow {
+        padding: 0 12px !important;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow .team_container .border_team .team_select_section {
+        padding: 59px 12px !important;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow .images_container .img_logo {
+        width: 45%;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow .text_container {
+        padding: 0 !important;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow .text_container .delete_svg {
+        right: 5px !important;
+    }
+
+    .table_card_container .row_form .inputArea.amenities_section .amenities_section_wrapper .imagesRow .text_container .delete_svg svg {
+        width: 20px;
+    }
+
+    .generic_data_table {
+        display: none !important;
+    }
+
+    .mobileTable {
+        display: block !important;
+        margin-top: 15px;
+    }
+
+    .table_card_container .captionTable {
+        /* display: none !important; */
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+
+    .captionTable .listing_stats {
+        width: 100% !important;
+    }
+
+    .table_card_container .captionTable .listing_actions {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+    }
+
+    .viewMoreUsers {
+        flex-direction: column;
+        gap: 24px;
+        margin: 15px 0;
+        border: none !important;
+    }
+
+    .captionTable:has(.listing_stats) {
+        display: none !important;
+    }
+
+    .table_card_container .row_form .inputArea.imagesArea {
+        gap: 10px;
+    }
+
+    .table_card_container .row_form .inputArea.imagesArea .imgSvg {
+        width: 30%;
+    }
+
+    .table_card_container .row_form .inputArea.imagesArea .imgSvg svg {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 540px) {
+
+    /* .analyticsCard */
+    .content_row>.col-12 {
+        padding-left: 12px !important;
+    }
+
+    .col-md-4:has(.analyticsCard) {
+        padding-left: 0;
+    }
+
+    .col-md-4:has(.analyticsCard):nth-child(2),
+    .col-md-4:has(.analyticsCard):nth-child(3) {
+        padding-right: 0;
+    }
+
+    .header_wrapper header {
+        font-size: 2.4rem !important;
+    }
+
+    .info_wrapper header {
+        font-size: 1.6rem !important;
+    }
+
+    .no_content_data h3 {
+        font-size: 2rem !important;
+    }
+
+    .no_content_data span {
+        font-size: 1.2rem;
+    }
+
+    .sidebar_informatics {
+        border: none !important;
+    }
+
+    .topBar header,
+    .desktop_btns {
+        display: none !important;
+    }
+
+    .bar_logo,
+    .closePanel {
+        display: block !important;
+    }
+
+    .userImage {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .userImage span {
+        font-size: 1.2rem !important;
+    }
+
+    .listing_action>.Btn {
+        max-width: 45% !important;
+    }
+
+    .listing_action>.Btn span {
+        font-size: 1.2rem !important;
+    }
+
+    .cardBox {
+        padding: 42px 12px !important;
+    }
+
+    .cardBox .Btn {
+        max-width: 100% !important;
+    }
+
+    .cardBox .list_items ul li {
+        font-size: 1.4rem !important;
+    }
+
+    .quillWrapper .ql-snow.ql-toolbar .ql-formats {
+        margin-right: 6px !important;
+    }
+}
+
+@media (min-width: 541px) {
+    .mobile_view_540 {
+        display: none !important;
+    }
+}

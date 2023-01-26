@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/website-editor/socials", {data:[{}],fetch:{},mutations:void 0});

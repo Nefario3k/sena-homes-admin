@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/website-editor/home-page", {data:[{}],fetch:{},mutations:void 0});

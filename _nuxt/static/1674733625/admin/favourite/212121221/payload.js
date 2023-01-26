@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/admin/favourite/212121221", {data:[{}],fetch:{},mutations:void 0});
